@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Form</title>
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        <h2> NBS HR </h2>
+        <button type="button" onclick="showRecords(true)">Show All Employees </button>
+        <fieldset>
+            <legend> Employee Info</legend>
+            <label for="nin">NI Number:</label>
+            <input type="text" id="enin" name="user_nin">
+            <br>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="user_name">
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="phone" id="phone" name="user_phone">
+            <br>
+            <label for="address">Address: </label>
+            <input type="text" id="address" name="user_address">
+            <br>
+
+            Department:<select id="department">
+                <option selected="selected">Select Department</option>
+                <option value="HR"> HR Department</option>
+                <option value="IT"> IT Department</option>
+                <option value="Sales">Sales Department</option>
+                
+            </select><br>
+        </fieldset>
+        <input type="button" value="Add Employee" onclick="addRecord()">
+        <input><span id="" style="visibility:hidden;color:red">**</span><br>
+
+    </form>
+
+    
+    <form>
+        Filter by Department:<select id="department">
+            <option selected>Select Department</option>
+            <option value="HR"> HR Department</option>
+            <option value="IT"> IT Department</option>
+            <option value="Sales">Sales Department</option>
+           
+        </select><br>
+        <input type="Button" value="Show Filtered Records" onclick="showRecords(false)">
+    </form>
+   
+   
+</body>
+<script src="JSProject code.js">  </script>
+
+
+</html>
